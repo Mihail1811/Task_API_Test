@@ -20,7 +20,12 @@ class BaseAPI:
         url = f"{self.base_url}{endpoint}"
         return requests.get(url, headers=self.headers, **kwargs)
 
-    def request_post(self, endpoint: str, data: dict = None, **kwargs) -> Response:
+    def request_post(
+        self,
+        endpoint: str,
+        data: dict = None,
+        **kwargs
+    ) -> Response:
         """
         Выполняет POST-запрос.
         :param endpoint: конечная точка API
@@ -41,7 +46,12 @@ class BaseAPI:
         url = f"{self.base_url}{endpoint}"
         return requests.delete(url, headers=self.headers, **kwargs)
 
-    def request_patch(self, endpoint: str, data: dict = None, **kwargs) -> Response:
+    def request_patch(
+        self,
+        endpoint: str,
+        data: dict = None,
+        **kwargs
+    ) -> Response:
         """
         Выполняет PATCH-запрос.
         :param endpoint: конечная точка API

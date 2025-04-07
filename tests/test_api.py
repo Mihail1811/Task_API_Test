@@ -105,7 +105,9 @@ class TestCase:
     """
     )
     def test_patch_entity(self, api, created_entity_id):
-        updated_entity = api.patch_entity(created_entity_id, UPDATE_ENTITY_DATA)
+        updated_entity = api.patch_entity(
+            created_entity_id, UPDATE_ENTITY_DATA
+        )
         with allure.step("Проверяем ID сущности"):
             assert updated_entity.id == created_entity_id
         with allure.step("Проверяем обновлённый title"):
